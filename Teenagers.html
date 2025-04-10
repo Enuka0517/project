@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sskincare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fbe5de;
+      border-bottom: 2px solid #aa6f73;
+    }
+
+    .logo img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #aa6f73;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #7a4b4f;
+    }
+
+    #searchBtn {
+      background-color: #aa6f73;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #searchBtn:hover {
+      background-color: #7a4b4f;
+    }
+
+    .container {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .products-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .product-info {
+      text-align: center;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .product-info img {
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn, #sgsbtn {
+      background-color: #aa6f73;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover, #sgsbtn:hover {
+      background-color: #7a4b4f;
+    }
+
+    footer.footer {
+      background-color: #fbe5de;
+      color: #7a4b4f;
+      border-top: 2px solid #aa6f73;
+      padding: 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .footer-container div {
+      min-width: 200px;
+    }
+
+    .footer h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .footer p, .footer ul li a {
+      font-size: 14px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links ul li {
+      margin: 5px 0;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #aa6f73;
+    }
+
+    .footer-links a:hover {
+      color: #7a4b4f;
+    }
+
+    .footer-social a {
+      text-decoration: none;
+      color: #aa6f73;
+      margin: 0 5px;
+    }
+
+    .footer-social a:hover {
+      color: #7a4b4f;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="header">
+    <div class="logo">
+      <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-81fc-6230-8030-07721b1685c1/raw" alt="Sskincare Logo">
+    </div>
+    <nav class="nav-links">
+      <a href="advise.html">Get an Advice</a>
+      <a href="aboutus.html">About Us</a>
+      <button id="searchBtn" onclick="searching()">🔍 Search</button>
+      <a href="basket.html" class="basket">🛒 Basket (<span id="basket-count">0</span>)</a>
+    </nav>
+  </div>
+
+
+  <div class="container">
+    <div class="products-wrapper">
+
+      <div class="product-info">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4PerW-qEMKUWcuPrfnscac51cYxCZZS_9KT2lagnWQJovhNEeAVZc3Eya5FnOczNQ_-s&usqp=CAU" alt="Toner" width="100" height="100">
+        <h3>Toner</h3>
+        <h1>$10</h1>
+        <button id="sgsbtn">Сагслах</button>
+      </div>
+
+      <div class="product-info">
+        <img src="https://via.placeholder.com/100x100?text=Night+Cream" alt="Night Cream" width="100" height="100">
+        <h3>Night Cream</h3>
+        <h1>$15</h1>
+        <button id="sgsbtn">Сагслах</button>
+      </div>
+
+      <div class="product-info">
+        <img src="https://via.placeholder.com/100x100?text=Cleanser" alt="Cleanser" width="100" height="100">
+        <h3>Cleanser</h3>
+        <h1>$20</h1>
+        <button id="sgsbtn">Сагслах</button>
+      </div>
+
+      <div class="product-info">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSROhuT39XeiddHC0KbFRqh0IcwmPdfxboang&s" alt="Sunscreen" width="100" height="100">
+        <h3>Sunscreen</h3>
+        <h1>$60</h1>
+        <button id="sgsbtn">Сагслах</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Location</h3>
+        <p>Khan-Uul 23 district Tomyo School of UB, Ulaanbaatar, Mongolia</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="advise.html">Get an Advice</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="https://www.instagram.com/nolucelight" target="_blank">Instagram</a> |
+        <a href="https://www.facebook.com/TsoKo" target="_blank">Facebook</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sskincare. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
